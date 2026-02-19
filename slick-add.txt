@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="../../assets/vendor/slick-carousel/slick/slick.css">
+<script src="../../assets/vendor/slick-carousel/slick/slick.js"></script>
+<script src="../../assets/js/helpers/hs.slick-carousel.js"></script>
+<script>
+  $(document).on('ready', function () {
+    // initialization of slick carousel
+    $.HSCore.components.HSSlickCarousel.init('.js-slick-carousel');
+  });
+</script>
