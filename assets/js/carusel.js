@@ -86,39 +86,25 @@ $('.rs-carousel').owlCarousel({
     }
   }
 });
-
-//slick slider js*//
-$('.center').slick({
-  centerMode: true,
-  centerPadding: '60px',
-  slidesToShow: 3,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 3
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1
-      }
+// Project Carousel ========//
+$('.project-silder').owlCarousel({
+	center: true,
+    items: 2,
+    loop: true,
+    margin: 10,
+	nav: true,
+    responsive:{
+        600:{
+            items: 2
+        },
+		800:{
+            items: 2
+        },
+		992:{
+            items: 3.5
+        },
     }
-  ]
 });
-$(document).on('ready', function () {
-// initialization of slick carousel
-$.HSCore.components.HSSlickCarousel.init('.js-slick-carousel');
-});
-//slick slider End*/
-
 //fancybox//
 Fancybox.bind("[data-fancybox]", {  
 });

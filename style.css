@@ -1208,16 +1208,16 @@ a{
     left: 2px;
     bottom: 44px;
 }
-.project .item{
-    width: 95%;
+.project .ps-item{
+    width: 98%;
     margin: 0 auto;
     position: relative;
 }
 .project .img-box img{
-    width: 100%;
+    width: 98%;
     margin: 0 auto;
 }
-.project .item .project-content{
+.project .ps-item .project-content{
     position: absolute;
     bottom: -27%;
     left: 10%;
@@ -1228,7 +1228,7 @@ a{
     background: var(--ps-color);
     transition: all 0.4s ease-in-out;
 }
-.project .item .project-content::after{
+.project .ps-item .project-content::after{
     position: absolute;
     content: "\f133";
     font-size: var(--sec-title-font);
@@ -1241,52 +1241,15 @@ a{
     right: 12%;
     transition: all 0.3s ease-in;
 }
-.project .item:hover .project-content{
+.project .ps-item:hover .project-content{
     bottom: 11%;
 }
-.project .item .project-content .ds-title a{
+.project .ps-item .project-content .ds-title a{
     color: var(--color);
     text-transform: capitalize;
     font-weight: bold;
     font-size: var(--fs-size);
     position: relative;
-}
-.project .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    border: 1px solid var(--ps-color);
-    font-size: 50px;
-    line-height: 0;
-    color: var(--ps-color);
-    font-weight: bold;
-    position: absolute;
-    right: 12%;
-    top: -47%;
-}
-.project .owl-carousel .owl-nav button.owl-next, .owl-carousel button.owl-dot{
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    color: var(--ps-color);
-    line-height: 0;
-    display: block;
-    font-size: 50px;
-    font-weight: bold;
-    position: absolute;
-    right: 8%;
-    top: -47%;
-    transition: all 500ms ease-in-out;
-}
-.project .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled{
-    display: block;
-}
-.project .owl-carousel .owl-dots{
-    display: block;
-}
-.project .owl-carousel button.owl-dot{
-    position: absolute;
-    display: block;
 }
 /*project section End*/
 
