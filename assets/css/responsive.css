@@ -84,4 +84,10 @@
     .fotterbtm .copyright-desc{
         text-align: center;
     }
+    .rs-banner{
+        margin-top: 44px;
+    }
+    .topbar{
+        display: none;
+    }
 }
