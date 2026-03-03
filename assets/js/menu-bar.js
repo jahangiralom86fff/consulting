@@ -1,3 +1,4 @@
+
 //navbar js start//
 $(document).ready(function(){	
 	$(document).ready(function () {
@@ -11,17 +12,20 @@ $(document).ready(function(){
 });
 //navbar End//
 
-//navbar js//
-const navbar = document.querySelector(".header .main-navbar");
-function updateNavbar() {
-    if (window.scrollY > 40) {
-        navbar.style.top = "0px";
+// Fixed navbar ========
+window.onscroll = function() {myFunction()};
+var navbar = document.querySelector('.main-navbar');
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
     } else {
-        navbar.style.top = "40px";
+        navbar.classList.remove("sticky");
     }
 };
-window.addEventListener("load", updateNavbar);
-window.addEventListener("scroll", updateNavbar);
 //navbar js//
+
+
 
 
