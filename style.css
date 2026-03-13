@@ -514,6 +514,10 @@ a{
 }
 .bredcam-banner .braedcum-content .bread-cums-title ul li a{
     color: var(--color);
+    transition: all 500ms ease-in-out;
+}
+.bredcam-banner .braedcum-content .bread-cums-title ul li a:hover{
+    color: var(--ps-color);
 }
 /** breadcrumbs end **/
 
@@ -2281,7 +2285,15 @@ a{
 .wedget-categoris .cata-item{
     margin-bottom: 20px;
 }
-.wedget-categoris .cata-item a{
+/*catagories item start*/
+.wedget-categoris .wedget-item{
+    padding-left: 0;
+}
+.wedget-categoris .wedget-item li{
+    list-style-type: none;
+    padding: 10px 0px;
+}
+.wedget-categoris .wedget-item li a{
     width: 100%;
     padding: 15px 20px;
     background: #fdfeff;
@@ -2292,29 +2304,14 @@ a{
     color: var(--das-black);
     font-weight: 600;
     position: relative;
-    transition: all 500ms ease-in-out;
+    transition: all 450ms ease-in-out;
     overflow: hidden;
     z-index: 1;
 }
-.wedget-categoris .cata-item a::before{
-    content: "";
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    left: -100%;
-    background: var(--ps-color);
-    border-radius: 4px;
-    z-index: -1;
-    transition: 500ms ease-in-out;
-}
-.wedget-categoris .cata-item a:hover::before{
-    left: 0;
-}
-.wedget-categoris .cata-item a:hover{
+.wedget-categoris .wedget-item li a:hover{
     color: var(--color);
 }
-.wedget-categoris .cata-item a::after{
+.wedget-categoris .wedget-item li a::after{
     position: absolute;
     content: "\f133";
     font-size: var(--sec-title-font);
@@ -2326,9 +2323,25 @@ a{
     right: 25px;
     transition: all 0.5s ease-in-out;
 }
-.wedget-categoris .cata-item a:hover::after{
+.wedget-categoris .wedget-item li a::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    background: var(--ps-color);
+    border-radius: 4px;
+    z-index: -1;
+    transition: 500ms ease-in-out;
+}
+.wedget-categoris .wedget-item li a:hover::after{
     color: var(--color);
 }
+.wedget-categoris .wedget-item li a:hover::before{
+    left: 0;
+}
+/*catagories item end*/
 /*tags area start NOw*/
 .wedget-tags{
     padding: 30px 20px;
@@ -2574,6 +2587,28 @@ a{
     outline: none;
     border-radius: 4px;
     margin-top: 30px;
+}
+.blog-deatils-item{
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+.blog-deatils-item .img-box img{
+    width: 460px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.blog-ds-item{
+    margin-top: 15px;
+    margin-bottom: 40px;
+    display: inline-block;
+    margin-left: 20%;
+}
+.blog-ds-item .img-box img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 /*blog details page End*/
 
@@ -3349,9 +3384,33 @@ a{
     width: 100%;
     background: var(--color);
 }
-.rs-collapse{
+.rs-faq .accordion-item{
+    margin: 20px 0px;
+}
+.rs-faq .accordion-item .accordion-header .accordion-button{
+    background: var(--sec-color);
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--das-black);
+    outline: none;
     border: 1px solid var(--ps-color);
-    border-radius: 4px;
+}
+.rs-faq .accordion-item .accordion-header .accordion-button:focus{
+    box-shadow: none;
+    color: var(--ps-color);
+}
+.rs-faq .accordion-item .accordion-body{
+    outline: 1px solid var(--color);
+    font-size: var(--fs-size);
+    color: var(--das-black);
+    font-family: var(--primary-font);
+    transition: all 500ms ease-in-out;
+}
+.rs-faq .accordion-item .collapse{
+    outline: 1px solid var(--color);
+}
+.rs-faq .accordion-item .collapse:focus{
+    outline: 1px solid var(--color);
 }
 .faq-subscribe-area{
     width: 100%;
@@ -3407,6 +3466,113 @@ a{
     font-family: var(--primary-font);
 }
 /*rs-faq End*/
+
+/*rs-contact section start now*/
+.rs-contact{
+    padding: 100px 0px;
+    width: 100%;
+    background: var(--color);
+    overflow: hidden;
+}
+.rs-contact .title-rs .cont-title{
+    font-size: var(--primary-title-size);
+    font-weight: 600;
+    color: var(--das-black);
+    padding-bottom: 20px;
+}
+.rs-contact .contact-form form input{
+    border: 1px solid #dbecff;
+    width: 96%;
+    height: 50px;
+    background: #fefeff;
+    box-shadow: none;
+    padding: 0px 25px;
+    font-family: var(--primary-font);
+    margin-bottom: 25px;
+    transition: all 500ms ease-in-out;
+}
+.rs-contact .contact-form form input:hover{
+    border: 1px solid var(--ps-color);
+}
+.rs-contact .contact-form form input::placeholder{
+    color: #d7d7d8;
+}
+.rs-contact .contact-form form .contact-ts{
+    width: 100%;
+    border: 1px solid #dbecff;
+    width: 96%;
+    height: 130px;
+    background: #fefeff;
+    box-shadow: none;
+    padding: 0px 25px;
+    font-family: var(--primary-font);
+    margin-bottom: 25px;
+    padding-top: 25px;
+    transition: all 500ms ease-in-out;
+}
+.rs-contact .contact-form form .contact-ts:hover{
+    border: 1px solid var(--ps-color);
+}
+.rs-contact .contact-form form .contact-ts::placeholder{
+    color: #d7d7d8;
+}
+.rs-contact .contact-form form button{
+    width: 350px;
+    height: 50px;
+    background: var(--ps-color);
+    border: none;
+    font-size: var(--fs-size);
+    font-weight: 600;
+    color: var(--color);
+    border-radius: 4px;
+    text-transform: capitalize;
+    margin-bottom: 60px;
+    z-index: 1;
+}
+.contact-social{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.contact-social .contact-info{
+    width: 60px;
+    height: 60px;
+    background: var(--ps-color);
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: var(--color);
+    border-radius: 50%;
+}
+.contact-social .contact-meta-title{
+    font-size: var(--fs-size);
+    font-weight: 600;
+    padding-left: 20px;
+    display: inline-block;
+}
+.contact-social .social-meta{
+    display: grid;
+    margin-top: 0px;
+}
+.contact-social .contact-num{
+    font-size: var(--fs-size);
+    font-weight: 600;
+    padding-left: 20px;
+    display: inline-block;
+    color: #6c6c6c;
+}
+.contact-map {
+    margin: 30px 0;
+    margin-bottom: 50px;
+    width: 100%;
+}
+.contact-map iframe{
+    width: 100%;
+    height: 300px;
+}
+/*rs-contact End*/
 
 /*Error page start now*/
 .rs-page-error{
@@ -3559,7 +3725,6 @@ a{
     justify-content: center;
     background-color: var(--color);
     align-items: center;
-    border-radius: 5px;
     color: var(--secondary);
     font-size: var(--sec-title-font);
     line-height: 1;
@@ -3579,7 +3744,6 @@ a{
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 5px;
     transform: scale(0,0);
     color: var(--color);
     transition: all 500ms ease-in-out;

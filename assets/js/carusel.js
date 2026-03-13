@@ -28,6 +28,37 @@ $('.carousel-one').owlCarousel({
     }
   }
 });
+
+$('.corusel-details').owlCarousel({
+  rtl: false,
+  loop: true,
+  margin: 0,
+  nav: true,
+  autoplay: false,
+  autoplayTimeout: 2000,
+  autoplayHoverPause: true,
+  responsive:{
+    0:{
+        items: 2,
+    },
+    800:{
+        items: 2,
+    },
+    992:{
+        items: 2, 
+    },
+    1300:{
+        items: 2,
+    },
+    1400:{
+        items: 2,
+    },
+    1500:{
+        items: 2,
+    }
+  }
+});
+
 $('.carousel-project').owlCarousel({
   rtl: false,
   loop: true,
