@@ -1692,7 +1692,7 @@ a{
     right: 5%;
     z-index: 2;
 }
-.our-team .team-item .team-catagoris .title{
+.our-team .team-item .team-catagoris .name-title{
     font-size: var(--sec-title-font);
     font-weight: bold;
     color: var(--color);
