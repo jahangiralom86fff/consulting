@@ -11,6 +11,7 @@
 :root{
     --primary-font: "Roboto",sans-serif;
     --fs-size: 16px;
+    --fw-bold-text: 600;
     --ps-color: #0d7efe;
     --sec-color: #f6faff;
     --color: #ffffff;
@@ -123,7 +124,7 @@ a{
   left: 0;
   right: 0;
   z-index: 99969;
-  background-color: #ffffff;
+  background-color: var(--color);
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,.15);
 }
 /* MENU text CSS */
@@ -352,17 +353,16 @@ a{
     font-weight: bold;
     overflow: hidden;
     z-index: 1;
+    padding-right: 20px;
     transition: all 500ms ease-in;
     text-align: right;
     
 }
-.header .main_menu .sub-menu li .menu-qoute-btn::before{
-    content: "\f101";
+.header .main_menu .sub-menu li .menu-qoute-btn .angels-icon{
     position: absolute;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 600;
-    right: 25%;
-    color: #ffffff;
+    font-size: var(--fs-size);
+    right: 24px;
+    top: 14px;
 }
 .header .main_menu .sub-menu li .menu-qoute-btn:hover{
     color: #ffffff;
@@ -446,6 +446,8 @@ a{
 }
 .bredcam-banner .overlay{
     position: absolute;
+    height: 100%;
+    width: 100%;
     top: 0;
     right: 0;
     left: 0;
@@ -488,7 +490,7 @@ a{
 .bredcam-banner .braedcum-content .bread-cums-title .page-title{
     font-size: var(--primary-title-size);
     color: var(--color);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     text-transform: capitalize;
 }
 .bredcam-banner .braedcum-content .bread-cums-title ul{
@@ -672,7 +674,7 @@ a{
     content: "\f101";
     right: 10%;
     font-family: "FontAWesome";
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     font-size: 15px;
 }
 .banner-hs .slider .slider-content .banner-btn::before{
@@ -722,9 +724,7 @@ a{
     position: relative;
     z-index: 4;
 }
-.about-agency .about-ms .img-box .shape{
-    position: relative;
-}
+
 .about-agency .about-ms .img-box .shape::after{
     content: url("assets/images/home-1/about-shape-to.png");
     position: absolute;
@@ -880,7 +880,7 @@ a{
     right: 14%;
     top: 33%;
     font-family: "FontAWesome";
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     font-size: 15px;
 }
 .btn-area .btn:hover::after{
@@ -996,7 +996,7 @@ a{
     color: var(--das-black);
     padding: 15px 10px;
     text-transform: capitalize;
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
 }
 .service .service-item .img-box img{
     width: 100%;
@@ -1021,7 +1021,7 @@ a{
     text-align: center;
     color: var(--color);
     text-transform: capitalize;
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     padding-bottom: 10px;
 }
 .service .service-item .service-content .service-desc{
@@ -1038,7 +1038,7 @@ a{
 .service .service-item .service-content .service-button .service-btn{
     font-size: var(--sec-title-font);
     color: var(--color);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     position: relative;
     transition: all 0.3s ease;
 }
@@ -1046,7 +1046,7 @@ a{
     position: absolute;
     content: "\f133";
     font-size: var(--sec-title-font);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     font-family: "Flaticon";
     transition: all 0.3s ease;
     transform: translateY(-50%);
@@ -1152,7 +1152,7 @@ a{
 .service-details-title{
     font-size: var(--primary-title-size);
     color: var(--das-black);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
 }
 .service-ds-desc {
     color: var(--primary-color);
@@ -1180,31 +1180,9 @@ a{
 .details-imgbox img{
     width: 95%;
 }
-.details-feature .detalis-mark{
-    font-size: var(--sec-title-font);
-    color: var(--das-black);
-    font-weight: 600;
-    padding-left: 40px;
-    padding-bottom: 15px;
-    position: relative;
-}
-.details-feature .detalis-mark::after{
-    position: absolute;
-    content: url("assets/images/service-details/Services-Detail-sign.png");
-    width: 25px;
-    height: 25px;
-    border: 1px solid var(--ps-color);
-    display: inline-block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    top: 0px;
-    left: -3px;
-}
 .details-collapse .accordion-item .accordion-header .accordion-button{
     font-size: var(--fs-size);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     color: var(--das-black);
     box-shadow: none;
     border: none !important;
@@ -1220,6 +1198,24 @@ a{
     border: none;
     margin: 20px 0;
     background: var(--sec-color);
+}
+.details-collapse .accordion-button::before{
+    position: absolute;
+    right: 20px;
+    top: 21px;
+    flex-shrink: 0;
+    width: var(--bs-accordion-btn-icon-width);
+    height: var(--bs-accordion-btn-icon-width);
+    margin-left: auto;
+    content: "";
+    background-image: var(--bs-accordion-btn-icon);
+    background-repeat: no-repeat;
+    background-size: var(--bs-accordion-btn-icon-width);
+    transition: var(--bs-accordion-btn-icon-transition);
+}
+.details-collapse .accordion-button:not(.collapsed)::before{
+    background-image: var(--bs-accordion-btn-active-icon);
+    transform: var(--bs-accordion-btn-icon-transform);
 }
 /*service details section End now*/
 
@@ -1243,7 +1239,7 @@ a{
 }
 .pricing-item .pricing-badge .title{
     font-size: var(--sec-title-font);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     text-align: center;
 }
 .pricing-item .pricing-badge .price-title{
@@ -1261,7 +1257,7 @@ a{
 .pricing-item .pricing-ps .ps-title{
     font-size: var(--sec-title-font);
     color: var(--das-black);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     text-align: center; 
     position: relative;
     padding-bottom: 15px;
@@ -1352,7 +1348,7 @@ a{
 }
 .brand .brand-title{
     font-size: 24px;
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     color: var(--das-black);
     margin-bottom: 0;
 }
@@ -1495,7 +1491,7 @@ a{
 .consultancy .consulting-parts .sulting-title{
     font-size: 20px;
     color: var(--color);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     padding-bottom: 20px;
     text-transform: capitalize;
 }
@@ -1562,6 +1558,12 @@ a{
 }
 /*counter section End*/
 
+/*about conter*/
+.about-bg{
+    background: var(--color);
+}
+/*about counter End*/
+
 /*project section start now*/
 .project{
     padding: 60px 0px;
@@ -1617,7 +1619,7 @@ a{
     position: absolute;
     content: "\f133";
     font-size: var(--sec-title-font);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     font-family: "Flaticon";
     transition: all 0.3s ease;
     transform: translateY(-50%);
@@ -1691,9 +1693,9 @@ a{
     width: 90%;
     padding: 10px 10px;
     background: var(--ps-color);
+    bottom: -8%;
     left: 5%;
     right: 5%;
-    bottom: -9%;
     z-index: 2;
 }
 .our-team .team-item .team-catagoris .title{
@@ -1712,23 +1714,21 @@ a{
     width: 100%;
     height: auto;
 }
-.our-team .team-item .team-content{
-    position: absolute;
-    bottom: 0%;
-    background: rgba(17, 15, 15, 0.7);
-    width: 100%;
-    height: 0%;
-    transition: all 500ms ease-in-out;
-    transform: scale(0,1);
-}
-.our-team .team-item:hover .team-content{
-    transform: scale(1,1);
-    height: 26%;
-}
 .our-team .team-item .team-content .social-links{
     padding-left: 0;
     display: flex;
     justify-content: center;
+    position: absolute;
+    bottom: -3%;
+    background: rgba(17, 15, 15, 0.7);
+    width: 100%;
+    height: 0px;
+    transform: scale(0,0);
+    transition: all 500ms ease-in-out;
+}
+.our-team .team-item:hover .team-content .social-links{
+    height: 140px;
+    transform: scale(1,1);
 }
 .our-team .team-item .team-content .social-links li{
     list-style-type: none;
@@ -1766,6 +1766,13 @@ a{
 }
 /*our-team section End*/
 
+/*about team bg*/
+.team-bg{
+    background: var(--color);
+    padding-bottom: 120px;
+}
+/*end*/
+
 /*rs-faq-part start now*/
 .rs-faq-part{
     padding: 60px 0px;
@@ -1779,7 +1786,7 @@ a{
 }
 .rs-faq-part .accordion-item .accordion-header .accordion-button{
     font-size: var(--fs-size);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     color: var(--das-black);
     box-shadow: none;
     background: none;
@@ -1849,7 +1856,7 @@ a{
     right: 14%;
     top: 33%;
     font-family: "FontAWesome";
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     font-size: 15px;
 
 }
@@ -1971,13 +1978,13 @@ a{
 }
 .testimonials  .testi-item .author-rs .author-name{
     font-size: 20px;
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     color: var(--das-black);
     text-transform: capitalize;
 }
 .testimonials  .testi-item .author-rs .designation{
     font-size: var(--fs-size);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     text-transform: capitalize;
     color: var(--ps-color);
 }
@@ -2050,7 +2057,7 @@ a{
     content: "\f073";
     position: absolute;
     font-family: "FontAwesome";
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     top: -2px;
     left: -1px
 }
@@ -2067,7 +2074,7 @@ a{
     content: "\f2c0";
     position: absolute;
     font-family: "FontAwesome";
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     top: -3px;
     left: -23px;
 }
@@ -2090,7 +2097,7 @@ a{
     text-transform: capitalize;
     padding-top: 15px;
     display: inline-block;
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     position: relative;
 }
 .our-blog .blog-item .blog-content .blog-btn::after{
@@ -2144,7 +2151,7 @@ a{
     content: "\f073";
     position: absolute;
     font-family: "FontAwesome";
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     left: -22px;
     top: -5px;
 }
@@ -2155,7 +2162,7 @@ a{
     content: "\f2c0";
     position: absolute;
     font-family: "FontAwesome";
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     left: -22px;
     top: -5px;
 }
@@ -2174,7 +2181,7 @@ a{
 }
 .rs-inner-blog .blog-item .blog-content .blog-title a{
     color: var(--das-black);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
 }
 .rs-inner-blog .blog-item .blog-content .blog-desc{
     font-size: 16px;
@@ -2241,31 +2248,31 @@ a{
     padding-right: 15px;
     overflow: hidden;
 }
-.recent-post .show-featured .post-desc{
-    padding-left: 15px;
+.recent-post .show-featured .post-content{
+    padding-left: 17px;
     padding-top: 4px;
 }
-.recent-post .show-featured .post-desc .post-title{
+.recent-post .show-featured .post-content .post-title{
     font-size: var(--fs-size);
     color: var(--das-black);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     transition: all 500ms ease-in-out;
 }
-.recent-post .show-featured .post-desc .post-title:hover{
+.recent-post .show-featured .post-content .post-title:hover{
     color: var(--ps-color);
 }
-.recent-post .show-featured .post-desc .date{
+.recent-post .show-featured .post-content .date{
     color: #656565;
     font-size: var(--fs-size);
     padding-top: 4px;
     padding-left: 25px;
     position: relative;
 }
-.recent-post .show-featured .post-desc .date::after{
+.recent-post .show-featured .post-content .date::after{
     content: "\f073";
     position: absolute;
     font-family: "FontAwesome";
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     left: 2px;
     top: 3px;
 }
@@ -2278,7 +2285,7 @@ a{
 }
 .wedget-title{
     font-size: 30px;
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     text-transform: capitalize;
     margin-bottom: 26px;
 }
@@ -2302,7 +2309,7 @@ a{
     border-radius: 4px;
     font-size: var(--sec-title-font);
     color: var(--das-black);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     position: relative;
     transition: all 450ms ease-in-out;
     overflow: hidden;
@@ -2356,7 +2363,7 @@ a{
     border-radius: 1px;
     color: var(--das-black);
     background: var(--color);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -2458,7 +2465,7 @@ a{
     font-size: var(--primary-title-size);
     color: var(--das-black);
     width: 90%;
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
 }
 .des-desc{
     font-size: var(--fs-size);
@@ -2470,26 +2477,48 @@ a{
 }
 .detalis-list-item .unorder-list li{
     list-style-type: none;
+    margin: 20px 0px;
     font-size: var(--sec-title-font);
     color: var(--das-black);
-    font-weight: 600;
-    margin: 20px 0px;
+    font-weight: var(--fw-bold-text);
     position: relative;
 }
-.detalis-list-item .unorder-list li::after{
-    content: url("assets/images/blog-1/blog-details-sign.png");
+.detalis-list-item .unorder-list li .icon{
     position: absolute;
-    left: -41px;
-    top: -4px;
-    width: 30px;
-    height: 30px;
-    line-height: 0;
+    width: 25px;
+    height: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: var(--fs-size);
     border: 1px solid var(--ps-color);
     border-radius: 50%;
+    left: -40px;
+    top: 1px;
+    z-index: 1;
+    transition: all 450ms ease-in-out;
 }
+.detalis-list-item .unorder-list li:hover .icon{
+    color: var(--color);
+}
+.detalis-list-item .unorder-list li .icon::before{
+    position: absolute;
+    content: "";
+    background-color: var(--ps-color);
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0,0);
+    transition: all 500ms ease-in-out;
+}
+.detalis-list-item .unorder-list li:hover .icon::before{
+    transform: scale(1,1);
+}
+
 .dt-title{
     font-size: var(--primary-title-size);
     color: var(--das-black);
@@ -2526,7 +2555,7 @@ a{
     border-radius: 1px;
     color: var(--color);
     background: var(--ps-color);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     display: inline-block;
     position: relative;
     margin: 0px 10px;
@@ -2569,13 +2598,13 @@ a{
     box-shadow: none;
     font-size: var(--fs-size);
     font-family: var(--primary-font);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .comment-area .textarea{
     height: 151px;
     width: 100%;
     padding-top: 10px;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 .comment-area .comment-btn{
     width: 150px;
@@ -2586,14 +2615,14 @@ a{
     border: none;
     outline: none;
     border-radius: 4px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 .blog-deatils-item{
     margin-top: 15px;
     margin-bottom: 40px;
 }
 .blog-deatils-item .img-box img{
-    width: 460px;
+    width: 450px;
     height: 320px;
     object-fit: cover;
     border-radius: 4px;
@@ -2601,11 +2630,10 @@ a{
 .blog-ds-item{
     margin-top: 15px;
     margin-bottom: 40px;
-    display: inline-block;
-    margin-left: 20%;
+    margin-left: 12%;
 }
 .blog-ds-item .img-box img{
-    width: 200px;
+    width: 250px;
     height: 250px;
     object-fit: cover;
     border-radius: 4px;
@@ -2629,7 +2657,7 @@ a{
     font-size: var(--sec-title-font);
     color: var(--das-black);
     text-transform: capitalize;
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     position: relative;
     overflow: hidden;
     transition: all 500ms ease-in-out;
@@ -2665,7 +2693,7 @@ a{
     background-color: var(--color);
     border-radius: 4px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     color: var(--das-black);
     text-transform: capitalize;
 }
@@ -2817,7 +2845,7 @@ a{
 .case-details-quote-title{
     font-size: 20px;
     color: var(--das-black);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     padding-bottom: 20px;
     padding-left: 45px;
     position: relative;
@@ -2855,7 +2883,7 @@ a{
     background: var(--sec-color);
     color: var(--das-black);
     font-size: 24px;
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     border-left: 4px solid var(--ps-color);
     position: relative;
     overflow: hidden;
@@ -2886,7 +2914,7 @@ a{
     padding: 15px 10px;
     padding-left: 70px;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     background: var(--ps-color);
     color: var(--color);
     text-transform: capitalize;
@@ -2954,7 +2982,7 @@ a{
 }
 .case-address .case-client{
     font-size: var(--fs-size);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     text-transform: capitalize;
     color: var(--primary-color);
 }
@@ -2996,7 +3024,7 @@ a{
 }
 .contact-title{
     font-size: 20px;
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     text-transform: capitalize;
     color: var(--das-black);
 }
@@ -3064,7 +3092,7 @@ a{
     border: none;
     outline: none;
     font-size: var(--fs-size);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     text-transform: capitalize;
     color: var(--color);
     overflow: hidden;
@@ -3152,7 +3180,7 @@ a{
     position: absolute;
     content: "\f133";
     font-size: var(--sec-title-font);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     font-family: "Flaticon";
     transition: all 0.3s ease;
     color: var(--color);
@@ -3175,6 +3203,8 @@ a{
     overflow: hidden;
 }
 .rs-project-plan .overlay{
+    height: 100%;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -3208,7 +3238,7 @@ a{
     border: none;
     outline: none;
     font-size: var(--fs-size);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     text-transform: capitalize;
     color: var(--color);
     line-height: 3.2;
@@ -3287,7 +3317,7 @@ a{
 }
 .project-ds-information .information-title{
     font-size: 30px;
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     text-transform: capitalize;
     padding-bottom: 10px;
 }
@@ -3303,7 +3333,7 @@ a{
 .project-ds-information .info-area .info-list li .info-title{
     font-size: 20px;
     color: var(--primary-color);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     text-transform: capitalize;
 }
 .project-ds-information .info-area .info-list li .info-desc{
@@ -3345,7 +3375,7 @@ a{
     list-style-type: none;
     padding: 10px 0px;
     font-size: var(--fs-size);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     position: relative;
 }
 .details-list ul li::after{
@@ -3422,7 +3452,7 @@ a{
 .faq-subscribe-area .fq-title{
     font-size: var(--sec-title-font);
     color: var(--das-black);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     padding-bottom: 10px;
 }
 .faq-subscribe-area form input{
@@ -3433,12 +3463,12 @@ a{
     border-bottom: 1px solid #ebebeb;
     color: var(--das-black);
     font-size: var(--sec-title-font);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     margin-bottom: 50px;
 }
 .faq-subscribe-area form input::placeholder{
     color: var(--das-black);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
 }
 .faq-subscribe-area form button{
     width: 100%;
@@ -3447,7 +3477,7 @@ a{
     border: none;
     background: var(--ps-color);
     color: var(--color);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     text-transform: capitalize;
     margin-bottom: 20px;
 }
@@ -3457,7 +3487,7 @@ a{
 }
 .faq-exprend .exprend-title{
     font-size: 30px;
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     color: var(--das-black);
 }
 .faq-exprend .exprend-desc{
@@ -3476,7 +3506,7 @@ a{
 }
 .rs-contact .title-rs .cont-title{
     font-size: var(--primary-title-size);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     color: var(--das-black);
     padding-bottom: 20px;
 }
@@ -3517,12 +3547,12 @@ a{
     color: #d7d7d8;
 }
 .rs-contact .contact-form form button{
-    width: 350px;
+    width: 325px;
     height: 50px;
     background: var(--ps-color);
     border: none;
     font-size: var(--fs-size);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     color: var(--color);
     border-radius: 4px;
     text-transform: capitalize;
@@ -3548,7 +3578,7 @@ a{
 }
 .contact-social .contact-meta-title{
     font-size: var(--fs-size);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     padding-left: 20px;
     display: inline-block;
 }
@@ -3558,7 +3588,7 @@ a{
 }
 .contact-social .contact-num{
     font-size: var(--fs-size);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     padding-left: 20px;
     display: inline-block;
     color: #6c6c6c;
@@ -3592,18 +3622,18 @@ a{
 }
 .rs-page-error .error-code{
     font-size: 100px;
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
     color: var(--das-black);
 }
 .rs-page-error .error-message{
     font-size: var(--primary-title-size);
     color: var(--das-black);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
 }
 .rs-page-error .error-desc{
     font-size: 24px;
     color: var(--das-black);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
 }
 /*Error page End*/
 
@@ -3677,7 +3707,7 @@ a{
     color: var(--color);
     text-transform: capitalize;
     font-size: var(--fs-size);
-    font-weight: 600;
+    font-weight: var(--fw-bold-text);
 }
 /*rs-newsletter End*/
 

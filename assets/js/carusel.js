@@ -125,8 +125,14 @@ $('.project-silder').owlCarousel({
     margin: 10,
 	nav: true,
     responsive:{
-        600:{
+        300:{
             items: 1
+        },
+        450:{
+            items: 1
+        },
+        600:{
+            items: 2
         },
 		800:{
             items: 2
