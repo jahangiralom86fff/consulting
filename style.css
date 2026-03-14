@@ -1199,23 +1199,17 @@ a{
     margin: 20px 0;
     background: var(--sec-color);
 }
-.details-collapse .accordion-button::before{
+.details-collapse .accordion-button::after{
+    background-image: none;
+    content: "\f101";
     position: absolute;
-    right: 20px;
-    top: 21px;
-    flex-shrink: 0;
-    width: var(--bs-accordion-btn-icon-width);
-    height: var(--bs-accordion-btn-icon-width);
-    margin-left: auto;
-    content: "";
-    background-image: var(--bs-accordion-btn-icon);
-    background-repeat: no-repeat;
-    background-size: var(--bs-accordion-btn-icon-width);
-    transition: var(--bs-accordion-btn-icon-transition);
+    font-family: "FontAwesome";
+    font-weight: 500;
+    right: 15px;
+    transform: rotate(0deg);
 }
-.details-collapse .accordion-button:not(.collapsed)::before{
-    background-image: var(--bs-accordion-btn-active-icon);
-    transform: var(--bs-accordion-btn-icon-transform);
+.details-collapse .accordion-button:not(.collapsed)::after{
+    transform: rotate(89deg);
 }
 /*service details section End now*/
 
@@ -3568,6 +3562,7 @@ a{
     width: 60px;
     height: 60px;
     background: var(--ps-color);
+    color: var(--color);
     display: inline-block;
     display: flex;
     justify-content: center;
@@ -3575,6 +3570,26 @@ a{
     font-size: 30px;
     color: var(--color);
     border-radius: 50%;
+    z-index: 1;
+    position: relative;
+}
+.contact-social .contact-info::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--das-black);
+    border-radius: 50%;
+    color: var(--color);
+    z-index: -1;
+    transition: all 500ms ease-in-out;
+    transform: scale(0,0);
+}
+.contact-social:hover .contact-info::after{
+    transform: scale(1,1);
 }
 .contact-social .contact-meta-title{
     font-size: var(--fs-size);
