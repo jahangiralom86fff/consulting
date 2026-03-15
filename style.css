@@ -421,8 +421,9 @@ a{
     border-top: 1px solid #ddd;
 }
 .header .mean-container .mean-nav ul li a{
-    color:#313131;
+    color: var(--das-black);
     transition: all .5s;
+    font-size: var(--sec-title-font);
 }
 .header .mean-container .mean-nav ul li a:hover{
     color: var(--secondary);
